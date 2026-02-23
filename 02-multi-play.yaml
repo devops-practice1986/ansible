@@ -1,0 +1,7 @@
+- name: play-02
+  hosts: web
+  tasks: 
+  - name: play-01 task-01
+    ansible.built.debug:
+      msg: "this is play-01 and task-01"
+      
