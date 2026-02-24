@@ -13,7 +13,7 @@
     prompt: Enter trainer name
   - name: DURATION
     prompt: Enter duration
-    vars_files:
+  vars_files:
     - 06-vars.yaml
   tasks: 
   - name: print the course information
