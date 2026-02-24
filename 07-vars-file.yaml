@@ -5,5 +5,5 @@
   tasks: 
   - name: print the course information
     ansible.builtin.debug:
-    msg: "Course:{{COURSE}},Trainer:{{TRAINER}},Duration: {{DURATION}}"
-    
+      msg: "Course:{{COURSE}},Trainer:{{TRAINER}},Duration: {{DURATION}}"
+
