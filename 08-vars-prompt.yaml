@@ -1,0 +1,13 @@
+- name: variables to print
+  hosts: web
+  vars_prompt: # This is the play level for all tasks
+  - name: COURSE
+    prompt: Enter course name
+  - name: TRAINER
+    prompt: Enter trainer name
+  - name: DURATION
+    prompt: Enter duration
+  tasks:
+  - name: print the inforamtion
+    ansible.builtin.debug:
+      msg: "Hi, iam learning {{COURSE}}, trainer:{{TRAINER}}, Duration: {{DURATION}}"
