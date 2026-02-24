@@ -1,6 +1,6 @@
 - name: variables to print
   hosts: web
-  vars:
+  vars: # This is the play level for all tasks
     COURSE: "DevOps with AWS"
     TRAINER: "Sivakumar reddy"
     DURATION: "120Hrs"
@@ -10,7 +10,7 @@
       msg: "Hi, iam learning {{COURSE}}, trainer:{{TRAINER}}, Duration: {{DURATION}}"
 
   - name: print the inforamtion again
-    vars: 
+    vars: # tasks level variables
       COURSE: "Ansible"
     ansible.builtin.debug:
       msg: "Hi, iam learning {{COURSE}}, trainer:{{TRAINER}}, Duration: {{DURATION}}"
