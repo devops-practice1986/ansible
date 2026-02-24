@@ -3,10 +3,9 @@
   tasks:
   - name: print names
     ansible.builtin.debug:
-      msg: "Hell....! {{ itme }}"
+      msg: "Hell....! {{ item }}"
     loop:
     - Amulya
     - Rajan
     - Bhushanam
     - Satti
-    
