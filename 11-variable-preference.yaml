@@ -5,14 +5,14 @@
    TRAINER: "Sivakumar reddy"
    DURATION: "120Hrs"
 
-  vars_prompt: # This is the play level for all tasks
-  - name: COURSE
-    prompt: Enter course name
-    private: false # if not confidential
-  - name: TRAINER
-    prompt: Enter trainer name
-  - name: DURATION
-    prompt: Enter duration
+  # vars_prompt: # This is the play level for all tasks
+  # - name: COURSE
+  #   prompt: Enter course name
+  #   private: false # if not confidential
+  # - name: TRAINER
+  #   prompt: Enter trainer name
+  # - name: DURATION
+  #   prompt: Enter duration
   vars_files:
     - 06-vars.yaml
   tasks: 
