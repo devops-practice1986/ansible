@@ -1,7 +1,7 @@
 - name: vars from vars-file
   hosts: web
   vars_files:
-  - vars.yaml
+  - 06-vars.yaml
   tasks: 
   - name: print the course information
     ansible.builtin.debug:
