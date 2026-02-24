@@ -3,6 +3,7 @@
   vars_prompt: # This is the play level for all tasks
   - name: COURSE
     prompt: Enter course name
+    private: false # if not confidential
   - name: TRAINER
     prompt: Enter trainer name
   - name: DURATION
