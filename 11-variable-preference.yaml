@@ -18,12 +18,20 @@
   tasks: 
   - name: print the course information
     ansible.builtin.debug:
-      msg: "Course:{{COURSE}},Trainer:{{TRAINER}},Duration: {{DURATION}}"
+      msg: "Course:{{COURSE}}"
   
   - name: vars from inventory
     ansible.builtin.debug:
-      msg: "Course: {{COURSE}}-Trainer:{{TRAINER}}-Duration:{{DURATION}}"
+      msg: "Course: {{COURSE}}"
  
   - name: print the inforamtion from play level variables
     ansible.builtin.debug:
-      msg: "Hi, iam learning {{COURSE}}, trainer:{{TRAINER}}, Duration: {{DURATION}}"
+      msg: "Hi, iam learning {{COURSE}}"
+
+# 1. command line/arg
+# 2. Task level
+# 3. Files
+# 4. Prompt
+# 5. Play
+# 6. inventory
+# 7. Roles
