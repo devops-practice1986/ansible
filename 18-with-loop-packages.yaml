@@ -5,6 +5,7 @@
   - name: install packages
     ansible.builtin.debug:
       name: "{{ item }}"
+      state: present
     loop:
     - mysql
     - nginx
