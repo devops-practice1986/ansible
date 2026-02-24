@@ -4,6 +4,7 @@
    COURSE: "DevOps with AWS"
    TRAINER: "Sivakumar reddy"
    DURATION: "120Hrs"
+
   vars_prompt: # This is the play level for all tasks
   - name: COURSE
     prompt: Enter course name
@@ -14,15 +15,15 @@
     prompt: Enter duration
     vars_files:
     - 06-vars.yaml
-    tasks: 
-    - name: print the course information
-      ansible.builtin.debug:
+  tasks: 
+  - name: print the course information
+    ansible.builtin.debug:
       msg: "Course:{{COURSE}},Trainer:{{TRAINER}},Duration: {{DURATION}}"
-    
-    - name: vars from inventory
-      ansible.builtin.debug:
-        msg: "Course: {{COURSE}}-Trainer:{{TRAINER}}-Duration:{{DURATION}}"
-  tasks:
+  
+  - name: vars from inventory
+    ansible.builtin.debug:
+      msg: "Course: {{COURSE}}-Trainer:{{TRAINER}}-Duration:{{DURATION}}"
+ 
   - name: print the inforamtion
     ansible.builtin.debug:
       msg: "Hi, iam learning {{COURSE}}, trainer:{{TRAINER}}, Duration: {{DURATION}}"
