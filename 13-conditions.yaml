@@ -15,5 +15,5 @@
 
   - name: print this if greater than equl to 10
     ansible.builtin.debug:
-      msg: "The give number is less than {{ my_number }}"
+      msg: "The give number is greater than {{ my_number }}"
     when: my_number | int > 10 # conditional expression, here | int convert into number
