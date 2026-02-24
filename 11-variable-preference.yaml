@@ -13,7 +13,7 @@
   #   prompt: Enter trainer name
   # - name: DURATION
   #   prompt: Enter duration
-  vars_files:
+  vars_files: # printing variables from vars_files
     - 06-vars.yaml
   tasks: 
   - name: print the course information
@@ -24,6 +24,6 @@
     ansible.builtin.debug:
       msg: "Course: {{COURSE}}-Trainer:{{TRAINER}}-Duration:{{DURATION}}"
  
-  - name: print the inforamtion
+  - name: print the inforamtion from play level variables
     ansible.builtin.debug:
       msg: "Hi, iam learning {{COURSE}}, trainer:{{TRAINER}}, Duration: {{DURATION}}"
