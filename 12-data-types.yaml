@@ -1,0 +1,25 @@
+- name: devops course information
+  hosts: local
+  vars: 
+    course: "devops with AWS" # This is string
+    duration: 120 # number
+    topics: # list
+    - linux
+    - shell
+    - ansible
+    - terraform
+    - AWS
+    - k8
+    live: true # boolean
+    tools: # map/dictonary
+      ci: jenkins
+      cm: ansible
+      cloud: AWS
+      aws:
+      - ami
+      - arn
+      - s3
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hi..! iam leaning course: {{ course }}, duration: {{ duration }}, topics are {{ topics }}, and live: {{ live }}, tools are : {{ tools }}"
