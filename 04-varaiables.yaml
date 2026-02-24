@@ -4,7 +4,6 @@
     COURSE: "DevOps with AWS"
     TRAINER: "Sivakumar reddy"
     DURATION: "120Hrs"
-	
   tasks:
   - name: print the inforamtion
     ansible.builtin.debug:
