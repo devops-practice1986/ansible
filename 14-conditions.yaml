@@ -1,10 +1,10 @@
 - name: create user
   hosts: web
-  connection: yes
+  becomd: yes
   tasks:
   - name: check user exist or not
     ansible.builtin.command: id expense
-    register: USER
+    register: USER # user will register in register as USER variable for output
     ignore_errors: true
 
   - name: print the user information
