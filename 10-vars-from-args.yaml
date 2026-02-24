@@ -1,0 +1,7 @@
+- name: variables printing
+  hosts: web
+  tasks:
+  - name: printing variables
+    ansible.builtin.debug:
+      msg: "Hello {{NAME}}, Good {{GREETINGS}}"
+# Values which are NAME and GREETINGS will be input from commnad line
