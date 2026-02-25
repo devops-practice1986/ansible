@@ -1,5 +1,5 @@
 - name: command vs shell
-  hsots: local
+  hosts: local
   connection: local
   tasks:
   - name: Execute the command
