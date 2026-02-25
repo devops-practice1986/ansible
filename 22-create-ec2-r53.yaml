@@ -27,12 +27,12 @@
   
   - name: create r53 records
     amazon.aws.route53:
-     state: present
-    zone: "{{ zone }}"
-    record: "{{ item.item }}.{{ zone }}" # mysql.inspiredevops.online
-    type: A
-    ttl: 1
-    value: "{{ item.instances[0].private_ip_address }}"
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}" # mysql.inspiredevops.online
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
     wait: true
     overwrite: true
-  loop: "{{ ec2_instance.results }}"
+    loop: "{{ ec2_instance.results }}"
