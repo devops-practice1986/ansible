@@ -1,6 +1,7 @@
 - name: create ec2 and r53 records
   hosts: local
   connection: local
+  become: yes
   vars: 
     subnet_id: subnet-0efdba4468fb44346
     sg_id: "sg-0fca81b9a3ae26a65"
@@ -11,6 +12,12 @@
     - frontend
     zone: "inspiredevops.online"
   tasks:
+  - name: ansible to install boto3 and botocore
+    ansible.builtin.pip:
+      name:
+      - boto3
+      - botocore
+      executable: pip3.13
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
@@ -41,7 +48,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ zone }}" # frontend.inspiredevops.online
+      record: "{{ zone }}" # inspiredevops.online
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
