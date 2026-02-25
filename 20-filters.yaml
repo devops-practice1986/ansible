@@ -43,3 +43,13 @@
     ansible.builtin.debug:
       msg: "{{ number | min }}"
   
+  
+  - name: convert map to list
+    vars: 
+      course_details:
+        course: "aws"
+        trainer: "matthews"
+        duration: "120hrs"
+    ansible.builtin.debug:
+     msg: "{{ course_details | dist2item }}"
+  
