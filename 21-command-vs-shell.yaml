@@ -1,0 +1,7 @@
+- name: command vs shell
+  hsots: local
+  connection: local
+  tasks:
+  - name: Execute the command
+    ansible.builtin.command: ls -l > /tmp/output.text
+    
