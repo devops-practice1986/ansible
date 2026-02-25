@@ -53,3 +53,11 @@
     ansible.builtin.debug:
      msg: "{{ course_details | dict2items }}"
   
+  - name: convert list to map
+    vars: 
+      course_details:
+        course: "aws"
+        trainer: "matthews"
+        duration: "120hrs"
+    ansible.builtin.debug:
+     msg: "{{ course_details | items2dict }}"
