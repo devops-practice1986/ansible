@@ -1,4 +1,4 @@
-- name: create a instances
+- name: create ec2 and r53 records
   hosts: local
   connection: local
   vars: 
@@ -13,13 +13,13 @@
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       mame: "{{ item }}"
-      vpc_subnet_id: "{{ subent_id }}"
-      instance_type: t3.micro
+      vpc_subnet_id: "{{ subnet_id }}"
+      instance_type: "t3.micro"
       image_id: "{{ ami_id }}"
       security_group_id: "{{ sg_id }}"
     loop: "{{ instances }}"
     register: ec2_instances
 
-  - name: print the oputput
-    ansible.builtin.debug:
-     msg: "{{ ec2_instances }}"
+  # - name: print the oputput
+  #   ansible.builtin.debug:
+  #    msg: "{{ ec2_instances }}"
