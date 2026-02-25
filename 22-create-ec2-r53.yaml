@@ -1,7 +1,6 @@
 - name: create ec2 and r53 records
   hosts: local
   connection: local
-  become: yes
   vars: 
     subnet_id: subnet-065df14339c10b391
     sg_id: "sg-0fca81b9a3ae26a65"
@@ -10,14 +9,15 @@
     - mysql
     - backend
     - frontend
-    zone: "inspiredevops.online"
+    zone: inspiredevops.online
   tasks:
   - name: ansible to install boto3 and botocore
     ansible.builtin.pip:
       name:
       - boto3
       - botocore
-      executable: pip3.9
+      executable: pip3.13
+
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
