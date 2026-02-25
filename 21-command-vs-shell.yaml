@@ -3,5 +3,6 @@
   connection: local
   tasks:
   - name: Execute the command
-    ansible.builtin.shell: ls -l > /tmp/output.text
+    ansible.builtin.shell: ls -l > /tmp/output.text # login to the server and execute it
+    # command module, just issue the command  
     #ansible.builtin.command: ls -l > /tmp/output.text
