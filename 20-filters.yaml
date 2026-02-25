@@ -55,9 +55,9 @@
   
   - name: convert list to map
     vars: 
-      course_details:
-        course: "aws"
-        trainer: "matthews"
-        duration: "120hrs"
+      course_list:
+      - "aws"
+      - "matthews"
+      - "120hrs"
     ansible.builtin.debug:
-     msg: "{{ course_details | items2dict }}"
+     msg: "{{ course_list | items2dict }}"
