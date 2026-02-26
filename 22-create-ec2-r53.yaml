@@ -16,9 +16,9 @@
       name:
       - boto3
       - botocore
-      #executable: pip3.13
-      when: ansible_os_family == "RedHat"
-      #when: pip_check.rc != 0
+      executable: pip3.13
+      #when: ansible_os_family == "RedHat"
+    when: pip_check.rc != 0
    
   - name: create ec2 instances
     amazon.aws.ec2_instance:
