@@ -16,7 +16,7 @@
       name:
       - boto3
       - botocore
-      executable: pip3.13
+      #executable: pip3.13
       when: ansible_os_family == "RedHat"
       #when: pip_check.rc != 0
    
