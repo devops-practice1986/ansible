@@ -38,11 +38,6 @@
         - botocore
       executable: pip3.13
 
-  - name: Check pip installed or not
-    command: pip3 --version
-    register: pip_check
-    ignore_errors: yes
-
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
