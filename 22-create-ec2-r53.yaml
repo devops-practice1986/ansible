@@ -29,7 +29,7 @@
       name:
         - boto3
         - botocore
-      executable: pip3.13
+      #executable: pip3.13
 
   - name: create ec2 instances
     amazon.aws.ec2_instance:
